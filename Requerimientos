@@ -1,0 +1,12 @@
+| ID   | Requerimiento Funcional                                            | Descripción                                                                 |
+|------|---------------------------------------------------------------------|-----------------------------------------------------------------------------|
+| RF01 | Búsqueda de libros                                                  | El sistema debe permitir buscar libros por su nombre.                      |
+| RF02 | Identificación de libros prestados                                  | El sistema debe mostrar qué libros están actualmente prestados.            |
+| RF03 | Acceso por correo exclusivo                                         | Los usuarios deben acceder mediante un correo creado únicamente para la app. |
+| RF04 | Envío de correos por préstamos vencidos                             | El sistema enviará correos automáticos a usuarios con préstamos sin devolución. |
+| RF05 | Publicación de nuevos libros                                        | El administrador podrá publicar y actualizar nuevos libros en la biblioteca. |
+| ID    | Requerimiento No Funcional                              | Descripción                                                                   |
+|-------|----------------------------------------------------------|-------------------------------------------------------------------------------|
+| RNF01 | Seguridad contra hackeos                                 | El sistema debe identificar al usuario y proteger el acceso contra ataques.   |
+| RNF02 | Rendimiento y disponibilidad                             | El sistema debe funcionar en óptimas condiciones durante su uso.             |
+| RNF03 | Compatibilidad multiplataforma                           | El sistema debe ser compatible con diferentes dispositivos (PC, Android, iOS). |
