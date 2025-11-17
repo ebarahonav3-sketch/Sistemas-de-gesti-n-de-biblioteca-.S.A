@@ -1,4 +1,162 @@
-id_venta,fecha,cliente_id,producto,cantidad,precio_total
-V1001,2025-11-01,C001,Camisa,2,39.98
-V1002,2025-11-05,C002,Pantalón,1,24.50
-V1003,2025-11-10,C003,Zapatos,1,59.90
+# Sistema de Gestión de Biblioteca
+
+## Descripción del Caso
+
+Sistema web para la gestión integral de una biblioteca que permite a los usuarios buscar libros, realizar préstamos y al administrador gestionar el catálogo. El sistema incluye autenticación segura, notificaciones automáticas por correos vencidos y compatibilidad multiplataforma.
+
+---
+
+## Objetivos
+
+- **Objetivo General:** Desarrollar un sistema de gestión bibliotecaria eficiente y seguro que facilite el control de préstamos y la búsqueda de libros.
+
+- **Objetivos Específicos:**
+  - Implementar un motor de búsqueda de libros por nombre
+  - Controlar el estado de préstamos en tiempo real
+  - Automatizar notificaciones de préstamos vencidos
+  - Garantizar acceso seguro mediante autenticación por correo
+  - Proporcionar herramientas de administración para gestión del catálogo
+
+---
+
+## Requerimientos
+
+### Requerimientos Funcionales
+
+| ID | Tipo | Requerimiento | Descripción |
+|:---|:---|:---|:---|
+| RF01 | Funcional | Búsqueda de libros | El sistema debe permitir buscar libros por su nombre. |
+| RF02 | Funcional | Identificación de libros prestados | El sistema debe mostrar qué libros están prestados actualmente. |
+| RF03 | Funcional | Acceso por correo exclusivo | El usuario debe acceder usando un correo creado únicamente para la aplicación. |
+| RF04 | Funcional | Envío de correos por préstamos vencidos | El sistema enviará correos automáticos a usuarios con préstamos sin devolución. |
+| RF05 | Funcional | Publicación de nuevos libros | El administrador podrá publicar y actualizar nuevos libros en la plataforma. |
+
+### Requerimientos No Funcionales
+
+| ID | Tipo | Requerimiento | Descripción |
+|:---|:---|:---|:---|
+| RNF01 | No funcional | Seguridad | El sistema debe identificar al usuario y evitar hackeos dentro de la web. |
+| RNF02 | No funcional | Rendimiento | El sistema debe funcionar en óptimas condiciones durante su uso. |
+| RNF03 | No funcional | Compatibilidad | El sistema debe ser compatible con diferentes dispositivos (PC, Android, iOS). |
+
+---
+
+## Tabla de Pruebas Funcionales
+
+| ID Prueba | Requerimiento | Caso de Prueba | Pasos | Resultado Esperado | Validación |
+|:---|:---|:---|:---|:---|:---|
+| CP01 | RF01 | Búsqueda de libro existente | 1. Acceder al sistema<br>2. Ingresar nombre del libro en buscador<br>3. Presionar buscar | El sistema muestra el libro con sus datos (título, autor, disponibilidad) | ✅ Exitosa |
+| CP02 | RF02 | Visualizar libros prestados | 1. Iniciar sesión como administrador<br>2. Acceder a sección "Préstamos"<br>3. Filtrar por "Estado: Prestado" | El sistema lista todos los libros actualmente prestados con fecha y usuario | ✅ Exitosa |
+| CP03 | RF03 | Intento de acceso con correo no autorizado | 1. Ir a página de login<br>2. Ingresar correo personal (gmail, hotmail)<br>3. Intentar iniciar sesión | El sistema rechaza el acceso y muestra mensaje: "Use correo institucional" | ✅ Exitosa |
+| CP04 | RF04 | Envío automático de correo por préstamo vencido | 1. Crear préstamo con fecha vencida<br>2. Esperar ejecución del cron job (diario)<br>3. Verificar bandeja de correo del usuario | Usuario recibe correo automático notificando préstamo vencido | ✅ Exitosa |
+| CP05 | RF05 | Publicación de nuevo libro | 1. Iniciar sesión como administrador<br>2. Ir a "Gestionar libros"<br>3. Completar formulario de nuevo libro<br>4. Guardar | El libro aparece en el catálogo disponible para búsqueda | ✅ Exitosa |
+
+---
+
+## Tipo de Mantenimiento Propuesto
+
+### Mantenimiento Adaptativo
+
+**Justificación:** El sistema requiere adaptaciones continuas debido a cambios en las necesidades de la biblioteca y actualizaciones tecnológicas.
+
+**Propuestas específicas:**
+
+1. **Integración con nuevos proveedores de email**
+   - Migración de servicio de correos a proveedores más confiables
+   - Adaptación a APIs actualizadas de servicios de notificación
+
+2. **Soporte para nuevos dispositivos móviles**
+   - Actualización de la interfaz responsive para nuevos tamaños de pantalla
+   - Optimización para tablets y dispositivos plegables
+
+3. **Cumplimiento normativo**
+   - Adaptación a nuevas regulaciones de protección de datos (GDPR, LOPDGDD)
+   - Implementación de políticas de privacidad actualizadas
+
+**Ver detalles completos en:** `/mantenimiento/Propuesta_Mantenimiento.md`
+
+---
+
+## Reflexión sobre Control de Versiones
+
+El uso de Git y GitHub en este proyecto ha demostrado ser fundamental por las siguientes razones:
+
+**Beneficios identificados:**
+
+- **Trazabilidad completa:** Cada cambio en requerimientos (v1 → v2) queda documentado con su justificación en commits específicos.
+
+- **Trabajo colaborativo:** Múltiples desarrolladores pueden trabajar simultáneamente en diferentes funcionalidades sin conflictos, usando ramas independientes.
+
+- **Gestión de versiones de documentación:** Los documentos de requerimientos, pruebas y mantenimiento evolucionan de forma controlada, permitiendo revisar versiones anteriores cuando sea necesario.
+
+- **Integración continua:** GitHub permite automatizar pruebas y despliegues mediante GitHub Actions, garantizando la calidad del código.
+
+- **Transparencia:** El historial de commits proporciona una línea de tiempo clara del desarrollo del proyecto, útil para auditorías y revisiones.
+
+**Lecciones aprendidas:**
+
+- Los mensajes de commit descriptivos son esenciales para entender la evolución del proyecto
+- El uso de ramas (feature branches) facilita el desarrollo de nuevas funcionalidades sin afectar el código estable
+- Los pull requests permiten revisión de código antes de integrar cambios
+- El archivo README.md es la carta de presentación del proyecto y debe mantenerse actualizado
+
+**Conclusión:** El control de versiones no solo es una herramienta técnica, sino una metodología de trabajo que mejora la calidad, colaboración y mantenibilidad del software a largo plazo.
+
+---
+
+## Estructura del Repositorio
+
+```
+/Sistema_Gestion_Biblioteca
+│
+├── README.md
+├── requerimientos/
+│   ├── DRS_v1.docx
+│   └── DRS_v2.docx
+├── pruebas/
+│   └── PlanPruebas.docx
+├── mantenimiento/
+│   └── Propuesta_Mantenimiento.md
+├── investigacion/
+│   └── Uso_de_Markdown.md
+└── evidencias/
+    ├── historial_commits.png
+    ├── versionado_docs.png
+    └── estructura_repo.png
+```
+
+---
+
+## Instalación y Uso
+
+```bash
+# Clonar el repositorio
+git clone https://github.com/tu-usuario/sistema-biblioteca.git
+
+# Navegar al directorio
+cd sistema-biblioteca
+
+# Instalar dependencias
+npm install
+
+# Configurar variables de entorno
+cp .env.example .env
+
+# Iniciar el servidor de desarrollo
+npm run dev
+```
+
+---
+
+## Contacto
+
+**Autor:** [Tu Nombre]  
+**Email:** [tu-email@ejemplo.com]  
+**Universidad:** [Nombre de tu Universidad]  
+**Asignatura:** Gestión de Proyectos de Software
+
+---
+
+## Licencia
+
+Este proyecto es desarrollado con fines académicos.
