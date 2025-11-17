@@ -2,18 +2,18 @@
 
 ## Requerimientos Funcionales
 
-| ID | Tipo | Requerimiento | Descripción |
-|:---|:---|:---|:---|
-| RF01 | Funcional | Búsqueda de libros | El sistema debe permitir buscar libros por su nombre. |
-| RF02 | Funcional | Identificación de libros prestados | El sistema debe mostrar qué libros están prestados actualmente. |
-| RF03 | Funcional | Acceso por correo exclusivo | El usuario debe acceder usando un correo creado únicamente para la aplicación. |
-| RF04 | Funcional | Envío de correos por préstamos vencidos | El sistema enviará correos automáticos a usuarios con préstamos sin devolución. |
-| RF05 | Funcional | Publicación de nuevos libros | El administrador podrá publicar y actualizar nuevos libros en la plataforma. |
+| ID    | Tipo      | Requerimiento                        | Descripción                                                         |
+|:------|:----------|:-------------------------------------|:--------------------------------------------------------------------|
+| RF01  | Funcional | Búsqueda de libros                   | El sistema debe permitir buscar libros por su nombre.               |
+| RF02  | Funcional | Identificación de libros prestados   | El sistema debe mostrar qué libros están prestados actualmente.     |
+| RF03  | Funcional | Acceso por correo exclusivo          | El usuario debe acceder usando un correo creado únicamente para la aplicación. |
+| RF04  | Funcional | Envío de correos por préstamos vencidos | El sistema enviará correos automáticos a usuarios con préstamos sin devolución. |
+| RF05  | Funcional | Publicación de nuevos libros         | El administrador podrá publicar y actualizar nuevos libros en la plataforma. |
 
 ## Requerimientos No Funcionales
 
-| ID | Tipo | Requerimiento | Descripción |
-|:---|:---|:---|:---|
-| RNF01 | No funcional | Seguridad | El sistema debe identificar al usuario y evitar hackeos dentro de la web. |
-| RNF02 | No funcional | Rendimiento | El sistema debe funcionar en óptimas condiciones durante su uso. |
-| RNF03 | No funcional | Compatibilidad | El sistema debe ser compatible con diferentes dispositivos (PC, Android, iOS). |
+| ID     | Tipo          | Requerimiento      | Descripción                                                            |
+|:-------|:--------------|:------------------|:-----------------------------------------------------------------------|
+| RNF01  | No funcional  | Seguridad         | El sistema debe identificar al usuario y evitar hackeos dentro de la web. |
+| RNF02  | No funcional  | Rendimiento       | El sistema debe funcionar en óptimas condiciones durante su uso.       |
+| RNF03  | No funcional  | Compatibilidad    | El sistema debe ser compatible con diferentes dispositivos (PC, Android, iOS). |
