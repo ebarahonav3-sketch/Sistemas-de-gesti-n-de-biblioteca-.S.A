@@ -1,19 +1,4 @@
-# Requerimientos del Sistema
-
-## Requerimientos Funcionales
-
-| ID | Tipo | Requerimiento | Descripción |
-|:---|:---|:---|:---|
-| RF01 | Funcional | Búsqueda de libros | El sistema debe permitir buscar libros por su nombre. |
-| RF02 | Funcional | Identificación de libros prestados | El sistema debe mostrar qué libros están prestados actualmente. |
-| RF03 | Funcional | Acceso por correo exclusivo | El usuario debe acceder usando un correo creado únicamente para la aplicación. |
-| RF04 | Funcional | Envío de correos por préstamos vencidos | El sistema enviará correos automáticos a usuarios con préstamos sin devolución. |
-| RF05 | Funcional | Publicación de nuevos libros | El administrador podrá publicar y actualizar nuevos libros en la plataforma. |
-
-## Requerimientos No Funcionales
-
-| ID | Tipo | Requerimiento | Descripción |
-|:---|:---|:---|:---|
-| RNF01 | No funcional | Seguridad | El sistema debe identificar al usuario y evitar hackeos dentro de la web. |
-| RNF02 | No funcional | Rendimiento | El sistema debe funcionar en óptimas condiciones durante su uso. |
-| RNF03 | No funcional | Compatibilidad | El sistema debe ser compatible con diferentes dispositivos (PC, Android, iOS). |
+id_venta,fecha,cliente_id,producto,cantidad,precio_total
+V1001,2025-11-01,C001,Camisa,2,39.98
+V1002,2025-11-05,C002,Pantalón,1,24.50
+V1003,2025-11-10,C003,Zapatos,1,59.90
